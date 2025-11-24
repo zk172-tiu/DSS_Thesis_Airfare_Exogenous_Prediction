@@ -1,4 +1,4 @@
-# file: RandomForestRegressor_Optuna.py
+# file: HPT_RandomForestRegressor_Optuna.py
 
 """
 This module implements hyperparameter optimisation for a RandomForestRegressor
