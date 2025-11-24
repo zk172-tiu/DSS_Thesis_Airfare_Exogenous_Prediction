@@ -1,4 +1,4 @@
-# file: RFR_Optuna.py
+# file: RandomForestRegressor_Optuna.py
 
 """
 This module implements hyperparameter optimisation for a RandomForestRegressor
