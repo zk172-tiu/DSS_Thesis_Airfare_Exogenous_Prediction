@@ -1,4 +1,4 @@
-# file: CatBoost_Optuna.py
+# file: HPT_CatBoost_Optuna.py
 
 """
 This module implements hyperparameter optimisation for a CatBoostRegressor
