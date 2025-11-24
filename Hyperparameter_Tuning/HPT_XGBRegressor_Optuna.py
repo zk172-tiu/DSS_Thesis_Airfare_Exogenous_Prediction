@@ -1,4 +1,4 @@
-# file: XGBRegressor_Optuna.py
+# file: HPT_XGBRegressor_Optuna.py
 
 """
 This module implements hyperparameter optimisation for an XGBRegressor
