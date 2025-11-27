@@ -6,6 +6,7 @@ from torch.utils.data import DataLoader, TensorDataset, random_split
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 from sklearn.metrics import mean_absolute_error, r2_score, mean_squared_error
 from carbontracker.tracker import CarbonTracker
+import random
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
