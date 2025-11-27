@@ -6,8 +6,17 @@ from torch.utils.data import DataLoader, TensorDataset, random_split
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 from sklearn.metrics import mean_absolute_error, r2_score, mean_squared_error
 from carbontracker.tracker import CarbonTracker
+import random
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
+
+SEED = 42
+np.random.seed(SEED)
+torch.manual_seed(SEED)
+torch.cuda.manual_seed_all(SEED)
+random.seed(SEED)
+generator = torch.Generator().manual_seed(SEED)
+
 
 hidden1 = 640
 hidden2 = 512
@@ -60,7 +69,7 @@ val_size = int(0.1 * total_size)
 train_size = total_size - test_size - val_size
 
 dataset = TensorDataset(X_num, X_cat, y)
-train_dataset, val_dataset, test_dataset = random_split(dataset, [train_size, val_size, test_size])
+train_dataset, val_dataset, test_dataset = random_split(dataset, [train_size, val_size, test_size], generator=generator)
 
 train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
 val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False)
