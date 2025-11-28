@@ -26,6 +26,7 @@ The exogenous variables containing airline-level operational scale and (seat) ca
 - Pandas (version 2.3.3)
 - PyTorch (version 2.5.1)
 - Scikit-learn (version 1.7.2)
+- Scipy (version 1.16.2)
 - Seaborn (version 0.13.2)
 - SHAP (version 0.49.1)
 - XGBoost (version 3.1.1)
